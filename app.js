@@ -32,7 +32,7 @@ const schoolInput=document.getElementById('schoolInput');
 const authorInput=document.getElementById('authorInput');
 const dateInput=document.getElementById('dateInput');
 const stored=JSON.parse(localStorage.getItem('ai-campus-settings')||'{}');
-schoolInput.value=stored.school||'蘇澳國小';authorInput.value=stored.author||'怡雯老師';dateInput.value=stored.date||'2026-11-12';
+schoolInput.value=stored.school||'示範學校';authorInput.value=stored.author||'研習講師';dateInput.value=stored.date||'2026-11-12';
 function formatDate(value){if(!value)return'日期待定';const [y,m,d]=value.split('-');return`${y} 年 ${Number(m)} 月 ${Number(d)} 日`}
 function applySettings(){document.getElementById('coverSchool').textContent=schoolInput.value||'我的學校';document.getElementById('coverAuthor').textContent=authorInput.value||'研習講師';document.getElementById('coverDate').textContent=formatDate(dateInput.value);document.getElementById('posterSchool').textContent=schoolInput.value||'我的學校'}
 applySettings();
