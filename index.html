@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b6f78">
+  <meta name="description" content="AI 校園導覽影片互動式教師研習簡報：從校園照片、虛擬主持人到完成影片。">
+  <title>AI 讓校園開口說故事｜互動式教師研習</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#slide-stage">跳到簡報內容</a>
+
+  <header class="topbar">
+    <div class="brand" aria-label="課程名稱">
+      <span class="brand-mark" aria-hidden="true">AI</span>
+      <div><strong>校園開口說故事</strong><small>互動式教師研習簡報</small></div>
+    </div>
+    <div class="top-actions">
+      <button class="ghost-btn" id="settingsBtn" type="button">研習設定</button>
+      <button class="primary-btn" id="presentBtn" type="button">全螢幕簡報</button>
+    </div>
+  </header>
+
+  <main>
+    <nav class="progress-nav" aria-label="簡報進度">
+      <div class="progress-meta"><span id="slideCounter">第 1 頁／共 11 頁</span><span id="slideTitle">課程封面</span></div>
+      <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+      <div class="dot-nav" id="dotNav"></div>
+    </nav>
+
+    <section class="stage" id="slide-stage" aria-live="polite">
+      <article class="slide active cover-slide" data-title="課程封面">
+        <img class="cover-art" src="assets/workshop-hero.png" alt="教師在山海校園中共同規劃 AI 校園導覽影片的彩色鉛筆插圖">
+        <div class="cover-overlay"></div>
+        <div class="cover-copy">
+          <span class="eyebrow">120 分鐘教師實作工作坊</span>
+          <h1>AI 讓校園<br>開口說故事</h1>
+          <p>從照片到虛擬主持人導覽影片</p>
+          <div class="cover-chips"><span>看示範</span><span>複製提示詞</span><span>動手操作</span><span>檢核成果</span></div>
+          <p class="byline"><span id="coverSchool">我的學校</span> · <span id="coverAuthor">研習講師</span> · <span id="coverDate">2026 年 11 月 12 日</span></p>
+        </div>
+      </article>
+
+      <article class="slide" data-title="學習目標與課程地圖">
+        <div class="slide-heading"><span class="step-no">01</span><div><p class="kicker">先看全貌，再開始製作</p><h2>學習目標與課程地圖</h2></div></div>
+        <div class="two-col">
+          <section class="card accent-card">
+            <h3>完成研習後，您能夠……</h3>
+            <ul class="check-list">
+              <li>規劃一支 60～90 秒的校園導覽影片。</li>
+              <li>撰寫角色、校景、旁白與影片生成提示詞。</li>
+              <li>維持人物與校園場景的一致性。</li>
+              <li>運用檢核表完成素材、剪輯與發表。</li>
+            </ul>
+          </section>
+          <section class="timeline-card">
+            <div><b>第一段｜30 分</b><span>素材盤點、角色定妝、隱私檢核</span></div>
+            <div><b>第二段｜40 分</b><span>校景分鏡、8 秒旁白、提示詞</span></div>
+            <div><b>第三段｜35 分</b><span>圖片轉影片、剪輯、字幕與音樂</span></div>
+            <div><b>第四段｜15 分</b><span>同儕回饋、成果發表、行動計畫</span></div>
+          </section>
+        </div>
+        <aside class="facilitator"><b>講師引導語</b>：「今天不追求一次做出完美影片，而是建立一套回到學校就能重複使用的製作流程。」</aside>
+      </article>
+
+      <article class="slide" data-title="素材準備與隱私檢核">
+        <div class="slide-heading"><span class="step-no">02</span><div><p class="kicker">開始前先把素材整理好</p><h2>素材準備與隱私檢核</h2></div></div>
+        <div class="grid-3">
+          <section class="card"><span class="mini-label">場景</span><h3>8～10 張校景照</h3><p>校門、教學樓、圖書館、操場、特色空間與校園全景；橫式照片優先。</p></section>
+          <section class="card"><span class="mini-label">人物</span><h3>1 張主持人參考圖</h3><p>正面、光線均勻、五官清楚；若使用真人照片，必須取得同意。</p></section>
+          <section class="card"><span class="mini-label">聲音</span><h3>旁白與背景音樂</h3><p>每景 30～40 字；音樂需確認可使用，並避免蓋過語音。</p></section>
+        </div>
+        <div class="privacy-box"><h3>上傳 AI 工具前，請逐項確認</h3><div class="privacy-grid"><label><input type="checkbox" data-progress="privacy-1"> 已移除學生姓名、座號與聯絡資料</label><label><input type="checkbox" data-progress="privacy-2"> 畫面未出現可辨識的學生正臉</label><label><input type="checkbox" data-progress="privacy-3"> 未放入帳號、密碼或未公開文件</label><label><input type="checkbox" data-progress="privacy-4"> 真人圖像已取得當事人同意</label></div></div>
+        <aside class="facilitator warning"><b>現場提醒</b>：若無法確認授權，改用 AI 生成的虛構成人主持人，不使用學生個資或真實學生臉部。</aside>
+      </article>
+
+      <article class="slide" data-title="設計虛擬主持人">
+        <div class="slide-heading"><span class="step-no">03</span><div><p class="kicker">固定角色，影片才不會每幕都換臉</p><h2>設計虛擬主持人定妝照</h2></div></div>
+        <div class="prompt-layout">
+          <section class="prompt-box">
+            <div class="prompt-head"><h3>角色定妝提示詞</h3><button class="copy-btn" data-copy="hostPrompt" type="button">複製提示詞</button></div>
+            <p id="hostPrompt">一位親切、專業且充滿教育熱忱的臺灣女性校園導覽主持人，穿著灰米色西裝外套、香檳色襯衫與深灰色長褲，配戴簡約識別證，整齊自然的及肩髮型，溫暖微笑，正面站姿，全身構圖，白色乾淨背景，柔和均勻棚拍光線，寫實但自然的教育形象攝影。固定五官、髮型、服裝、配件與身形比例，不加入文字、商標或學生。</p>
+          </section>
+          <section class="task-card"><span class="mini-label">學員任務｜12 分鐘</span><h3>做出第一張定妝照</h3><ol><li>把性別、服裝與髮型改成自己的設定。</li><li>生成後檢查手指、五官與服裝細節。</li><li>選定一張，後續所有場景都使用同一張。</li></ol><label class="done"><input type="checkbox" data-progress="task-host"> 我已選定角色定妝照</label></section>
+        </div>
+        <aside class="facilitator"><b>講師引導語</b>：「提示詞不是越長越好；先把不能改變的角色特徵寫清楚，才是維持一致性的關鍵。」</aside>
+      </article>
+
+      <article class="slide" data-title="三視圖與表情表">
+        <div class="slide-heading"><span class="step-no">04</span><div><p class="kicker">補齊角色參考，降低影片漂移</p><h2>製作三視圖與表情表</h2></div></div>
+        <div class="two-col">
+          <section class="prompt-box">
+            <div class="prompt-head"><h3>三視圖提示詞</h3><button class="copy-btn" data-copy="viewPrompt" type="button">複製提示詞</button></div>
+            <p id="viewPrompt">以上傳的主持人定妝照作為唯一角色參考，製作角色設定表：同一人物、同一服裝、同一髮型與配件，依序呈現正面、45 度側面、完整側面與背面，全身站姿，比例一致，白色背景，均勻光線。下方加入六種頭像表情：自然微笑、開心、專注、驚喜、思考、鼓勵。不要加入任何文字，不改變人物身分與服裝。</p>
+          </section>
+          <section class="compare-card"><h3>生成後，請放大檢查</h3><div class="compare-grid"><span>五官一致</span><span>髮型一致</span><span>服裝一致</span><span>身高比例一致</span><span>手部自然</span><span>背景乾淨</span></div><label class="done"><input type="checkbox" data-progress="task-views"> 三視圖與表情表已通過檢查</label></section>
+        </div>
+        <aside class="facilitator warning"><b>常見狀況</b>：若某一視角明顯變成另一個人，不要勉強使用；回到定妝照，縮短指令並強調「唯一角色參考」。</aside>
+      </article>
+
+      <article class="slide" data-title="校景分鏡規劃">
+        <div class="slide-heading"><span class="step-no">05</span><div><p class="kicker">一張照片只說一件事</p><h2>把校園照片排成故事</h2></div></div>
+        <div class="story-strip">
+          <div><b>1 開場</b><span>校園全景<br>建立地點</span></div><i>→</i><div><b>2 探索</b><span>建築與自然<br>呈現特色</span></div><i>→</i><div><b>3 學習</b><span>閱讀與創新<br>連結課程</span></div><i>→</i><div><b>4 活力</b><span>運動與合作<br>展現生活</span></div><i>→</i><div><b>5 結尾</b><span>教育願景<br>留下印象</span></div>
+        </div>
+        <section class="worktable"><h3>快速分鏡練習</h3><div class="table-wrap"><table><thead><tr><th>場景</th><th>照片主體</th><th>一句重點</th><th>鏡頭動作</th></tr></thead><tbody><tr><td>1</td><td><input aria-label="場景一照片主體" placeholder="例：校園全景"></td><td><input aria-label="場景一重點" placeholder="例：山海相伴的學習環境"></td><td><select aria-label="場景一鏡頭動作"><option>緩慢推進</option><option>向右平移</option><option>緩慢拉遠</option></select></td></tr><tr><td>2</td><td><input aria-label="場景二照片主體" placeholder="例：圖書館"></td><td><input aria-label="場景二重點" placeholder="例：從閱讀打開世界"></td><td><select aria-label="場景二鏡頭動作"><option>向右平移</option><option>緩慢推進</option><option>緩慢拉遠</option></select></td></tr><tr><td>3</td><td><input aria-label="場景三照片主體" placeholder="例：操場"></td><td><input aria-label="場景三重點" placeholder="例：在合作中建立自信"></td><td><select aria-label="場景三鏡頭動作"><option>緩慢拉遠</option><option>向右平移</option><option>緩慢推進</option></select></td></tr></tbody></table></div></section>
+      </article>
+
+      <article class="slide" data-title="8 秒旁白練習器">
+        <div class="slide-heading"><span class="step-no">06</span><div><p class="kicker">30～40 字，讓語速自然、訊息清楚</p><h2>8 秒旁白練習器</h2></div></div>
+        <div class="narration-layout">
+          <section class="editor-card"><label for="narrationText"><b>輸入一個場景的旁白</b></label><textarea id="narrationText" rows="6">歡迎來到美麗的蘇澳國小！青山環繞、綠意盎然，這裡是孩子快樂學習、勇敢探索的幸福校園。</textarea><div class="editor-actions"><span id="charCount">0 字</span><span id="lengthHint">建議 30～40 字</span><button class="ghost-btn" id="speakBtn" type="button">試聽旁白</button><button class="copy-btn" data-copy="narrationText" type="button">複製文字</button></div></section>
+          <section class="formula-card"><h3>好旁白的三步公式</h3><ol><li><b>指出地點</b><span>「這裡是……」</span></li><li><b>描述特色</b><span>看得見的環境或活動</span></li><li><b>連結意義</b><span>孩子在這裡學會什麼</span></li></ol><p>避免把校史、得獎紀錄與太多抽象口號全部塞進同一段。</p></section>
+        </div>
+        <aside class="facilitator"><b>同儕回饋</b>：兩人一組互讀旁白，檢查「聽一次就懂嗎？畫面和文字一致嗎？有沒有太像公文？」</aside>
+      </article>
+
+      <article class="slide" data-title="封面海報與開場">
+        <div class="slide-heading"><span class="step-no">07</span><div><p class="kicker">用一張圖建立影片第一印象</p><h2>製作 16:9 封面海報</h2></div></div>
+        <div class="prompt-layout">
+          <section class="prompt-box">
+            <div class="prompt-head"><h3>封面海報提示詞</h3><button class="copy-btn" data-copy="posterPrompt" type="button">複製提示詞</button></div>
+            <p id="posterPrompt">以提供的校園全景照片為主要背景，保留真實校舍、操場與山林配置。加入同一位虛擬主持人站在畫面右側，微笑向觀眾揮手。16:9 橫式構圖，明亮自然光，溫暖、清楚、具教育專業感，左側保留乾淨空間供後續加入可編輯標題。不要在圖片中生成文字、校名、日期或商標。</p>
+          </section>
+          <section class="task-card"><span class="mini-label">文字保留可編輯</span><h3>建議後製文字</h3><div class="poster-copy"><strong id="posterSchool">我的學校</strong><span>AI 校園導覽</span><small>從照片到虛擬主持人影片</small></div><p>標題與日期在簡報或剪輯軟體中加入，避免圖片生成文字出現錯字。</p><label class="done"><input type="checkbox" data-progress="task-poster"> 封面已完成並逐字檢查</label></section>
+        </div>
+      </article>
+
+      <article class="slide" data-title="圖片轉影片提示詞">
+        <div class="slide-heading"><span class="step-no">08</span><div><p class="kicker">背景不變、人物自然、鏡頭只做一種運動</p><h2>圖片轉影片提示詞</h2></div></div>
+        <section class="prompt-box large-prompt">
+          <div class="prompt-head"><h3>通用場景模板</h3><button class="copy-btn" data-copy="videoPrompt" type="button">複製提示詞</button></div>
+          <p id="videoPrompt">以上傳的校園照片作為真實背景，保留建築外觀、招牌、色彩、樹木與空間配置，不新增或移除建築。以上傳的主持人定妝照作為唯一人物參考，固定五官、髮型、服裝與身形。主持人站在畫面右側，以自然微笑和開放式手勢介紹場景，嘴型同步臺灣繁體中文旁白。攝影機由中景緩慢向前推進，運動平穩，光線自然，16:9，約 8 秒。避免人物漂移、臉部變形、手指錯誤、背景文字變形、快速運鏡與多餘人物。</p>
+        </section>
+        <div class="quality-row"><div><b>鎖定</b><span>人物身分、服裝、背景配置</span></div><div><b>只選一種</b><span>推進、平移、跟拍或拉遠</span></div><div><b>負面條件</b><span>變形、漂移、亂字、多餘人物</span></div><div><b>每次先試一段</b><span>通過後再批次製作</span></div></div>
+        <label class="done centered"><input type="checkbox" data-progress="task-video"> 我已完成並檢查至少一段 8 秒影片</label>
+      </article>
+
+      <article class="slide" data-title="剪輯、字幕與品質檢核">
+        <div class="slide-heading"><span class="step-no">09</span><div><p class="kicker">把片段變成完整作品</p><h2>剪輯、字幕與品質檢核</h2></div></div>
+        <div class="edit-flow"><div><b>① 排序</b><span>開場 → 特色 → 願景</span></div><div><b>② 修剪</b><span>刪掉停頓與變形畫面</span></div><div><b>③ 字幕</b><span>臺灣繁體中文、逐字校對</span></div><div><b>④ 音訊</b><span>旁白清楚、音樂不搶聲</span></div><div><b>⑤ 輸出</b><span>1080p、16:9、MP4</span></div></div>
+        <section class="qa-panel"><h3>交付前檢核</h3><div class="qa-grid"><label><input type="checkbox" data-progress="qa-1"> 人物每幕外觀一致</label><label><input type="checkbox" data-progress="qa-2"> 校舍與地名沒有變形</label><label><input type="checkbox" data-progress="qa-3"> 字幕無錯字、漏字與亂碼</label><label><input type="checkbox" data-progress="qa-4"> 旁白與畫面內容相符</label><label><input type="checkbox" data-progress="qa-5"> 音樂音量低於旁白</label><label><input type="checkbox" data-progress="qa-6"> 無學生個資與未授權肖像</label></div></section>
+        <aside class="facilitator warning"><b>品質原則</b>：若 AI 改變校舍外觀或建築文字，優先保留原始校景照片，以剪輯、平移與縮放取代有問題的生成片段。</aside>
+      </article>
+
+      <article class="slide" data-title="成果發表與評量">
+        <div class="slide-heading"><span class="step-no">10</span><div><p class="kicker">完成一小段，也能帶走完整方法</p><h2>成果發表與實作評量</h2></div></div>
+        <div class="two-col">
+          <section class="rubric"><h3>兩星一願回饋</h3><div><b>★ 第一顆星</b><span>最能代表學校特色的畫面是……</span></div><div><b>★ 第二顆星</b><span>人物、旁白或節奏做得好的地方是……</span></div><div><b>☆ 一個願望</b><span>如果再調整一件事，我建議……</span></div></section>
+          <section class="task-card"><span class="mini-label">成果門檻</span><h3>研習完成作品</h3><ul class="check-list compact"><li>1 張主持人定妝照</li><li>1 份三視圖或表情表</li><li>3 段校景旁白與分鏡</li><li>至少 1 段 8 秒生成影片</li><li>1 張封面或 30 秒試剪版本</li></ul><label class="done"><input type="checkbox" data-progress="task-share"> 我已完成成果展示</label></section>
+        </div>
+        <section class="exit-ticket"><label for="nextAction"><b>我的下一步行動</b></label><input id="nextAction" placeholder="例：下週先拍攝圖書館、操場與校門三個場景，完成 30 秒試作。"><button class="primary-btn" id="saveActionBtn" type="button">儲存行動計畫</button></section>
+        <div class="final-stats compact-stats"><div><strong id="completionPercent">0%</strong><span>研習檢核完成度</span></div><div><strong>11</strong><span>頁實作流程</span></div><div><strong>120</strong><span>分鐘建議時數</span></div></div>
+        <p class="closing-line">帶回學校，開始說自己的故事：先求真實清楚，再逐步加深創意。</p>
+      </article>
+    </section>
+
+    <div class="slide-controls" aria-label="投影片控制">
+      <button id="prevBtn" type="button">← 上一頁</button>
+      <button id="nextBtn" class="primary-btn" type="button">下一頁 →</button>
+    </div>
+  </main>
+
+  <dialog id="settingsDialog">
+    <form method="dialog" class="settings-form">
+      <div class="dialog-head"><div><span class="mini-label">個人化研習簡報</span><h2>研習設定</h2></div><button class="icon-btn" value="cancel" aria-label="關閉設定">×</button></div>
+      <label>學校名稱<input id="schoolInput" placeholder="例：蘇澳國小"></label>
+      <label>講師／製作者<input id="authorInput" placeholder="例：怡雯老師"></label>
+      <label>研習日期<input id="dateInput" type="date"></label>
+      <div class="dialog-actions"><button class="ghost-btn" value="cancel">取消</button><button class="primary-btn" id="saveSettingsBtn" value="default">套用設定</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
